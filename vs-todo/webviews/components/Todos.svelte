@@ -12,8 +12,8 @@ async function markasComplete(t:number){
         headers:{'content-type':"application/json",
             authorization:`Brearer ${accessToken}`}
     })
-    const {todo}=await response.json()
-    todos=[todo,...todos]
+    await response.json()
+    
 }
 async function addTodo(t:string) {
     const response=await fetch(`${apiBaseUrl}/todo`,{
